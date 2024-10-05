@@ -1,12 +1,14 @@
 # SubBirack
 
-## ✨ Fonctionnalités
+> [!Note]
+> SubBirack.py est un script avancé conçu pour identifier et analyser en profondeur les sous-domaines d'un domaine cible. 
+> 
+> ## ✨ Fonctionnalités
+> Il intègre plusieurs fonctionnalités, notamment :
+* **Recherche de sous-domaines** : Utilisation de l'outil Sublist3r pour scanner et lister les sous-domaines d'un domaine.  
+* **Vérification des sous-domaines actifs** : Validation des sous-domaines via des requêtes HTTP pour détecter ceux qui sont actifs.  
+* **Résolution DNS** : Vérification de la résolution DNS des sous-domaines actifs pour obtenir leurs adresses IP associées.
 
-SubBirack.py est un script avancé conçu pour identifier et analyser en profondeur les sous-domaines d'un domaine cible. Il intègre plusieurs fonctionnalités, notamment :
-
-●  **Recherche de sous-domaines** : Utilisation de l'outil Sublist3r pour scanner et lister les sous-domaines d'un domaine.  
-●  **Vérification des sous-domaines actifs** : Validation des sous-domaines via des requêtes HTTP pour détecter ceux qui sont actifs.  
-●  **Résolution DNS** : Vérification de la résolution DNS des sous-domaines actifs pour obtenir leurs adresses IP associées.
 
 ## 🛠️ Utilisation :
 
@@ -63,12 +65,15 @@ L'utilisation d'un environnement virtuel est recommandée pour isoler les dépen
 
 ## ⚠️ Disclaimer :
 
-SubBirack.py est un outil puissant qui doit être utilisé de manière légale et éthique. Il est strictement réservé à :  
-●     Des tests d'intrusion autorisés avec l'accord explicite des propriétaires des systèmes concernés.  
-●     Des analyses de sécurité dans le cadre de missions légales avec consentement.  
-●     Un usage personnel en laboratoire pour des tests sur des environnements contrôlés. 
+> [!Important]
+>
+> SubBirack.py est un outil puissant qui doit être utilisé de manière légale et éthique. Il est strictement réservé à :  
+* Des tests d'intrusion autorisés avec l'accord explicite des propriétaires des systèmes concernés.
+* Des analyses de sécurité dans le cadre de missions légales avec consentement.
+* Un usage personnel en laboratoire pour des tests sur des environnements contrôlés. 
+>
+> L'utilisation de cet outil pour analyser ou compromettre des systèmes sans autorisation est illégale et pourrait entraîner des sanctions civiles et pénales. L'auteur décline toute responsabilité pour tout usage inapproprié de cet outil.
 
-L'utilisation de cet outil pour analyser ou compromettre des systèmes sans autorisation est illégale et pourrait entraîner des sanctions civiles et pénales. L'auteur décline toute responsabilité pour tout usage inapproprié de cet outil.
 
 
 ## 🎥 Démo :
