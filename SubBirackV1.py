@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 import subprocess
 import requests
 import dns.resolver
@@ -17,26 +18,26 @@ print("""
 ###########################################################
 """)
 
-# Fonction pour afficher les résultats
+# Function to display results
 def birack(data):
     print(data)
 
-# Fonction pour exécuter SubBirack et obtenir des sous-domaines
+# Function to execute SubBirack and get subdomains
 def birackinit(domain):
     print(f"SubBirack is scanning for subdomains of {domain}...")
     
-    # Exécuter Sublist3r via subprocess
+    # Execute Sublist3r via subprocess
     result = subprocess.run(['sublist3r', '-d', domain], capture_output=True, text=True)
     
     subdomains = result.stdout.splitlines()
     return [subdomain for subdomain in subdomains if domain in subdomain]
 
-# Fonction pour vérifier si les sous-domaines sont actifs
+# Function to check if subdomains are active
 def mata(subdomains):
     active_subdomains = []
     for subdomain in subdomains:
         try:
-            # Faire une requête HEAD pour tester la réponse HTTP
+            # Send a HEAD request to test HTTP response
             response = requests.head(f"http://{subdomain}", timeout=5)
             if response.status_code < 400:
                 birack(f"Active subdomain found: {subdomain}")
@@ -45,7 +46,7 @@ def mata(subdomains):
             continue
     return active_subdomains
 
-# Fonction pour résoudre les DNS
+# Function to resolve DNS
 def resolve_dns(subdomain):
     try:
         result = dns.resolver.resolve(subdomain, 'A')
@@ -61,26 +62,26 @@ def resolve_dns(subdomain):
         birack(f"Error resolving {subdomain}: {e}")
 
 if __name__ == "__main__":
-    # Vérifier si le domaine est passé en argument
+    # Check if the domain is passed as an argument
     if len(sys.argv) < 2:
         print("Usage: ./SubBirack.py <domain>")
         sys.exit(1)
 
-    # Domaine cible passé en argument
+    # Target domain passed as an argument
     domain = sys.argv[1]
 
-    # Étape 1 : Obtenir la liste des sous-domaines avec SubBirack
+    # Searching for subdomains
     subdomains = birackinit(domain)
 
-    # Afficher les sous-domaines trouvés
+    # Message to start the scan
     birack(f" Subdomains found by SubBirack for {domain} ")
     for subdomain in subdomains:
         birack(subdomain)
 
-    # Étape 2 : Vérifier quels sous-domaines sont actifs
+    # Checking for active subdomains
     active_subdomains = mata(subdomains)
 
-    # Étape 3 : Résoudre les DNS des sous-domaines actifs
+    # DNS Resolution
     birack("\n⭐⭐⭐⭐⭐⭐⭐⭐⭐ DNS Resolutions ⭐⭐⭐⭐⭐⭐⭐⭐⭐")
     for subdomain in active_subdomains:
         resolve_dns(subdomain)
