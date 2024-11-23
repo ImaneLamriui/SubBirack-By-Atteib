@@ -10,58 +10,40 @@
 * **Résolution DNS** : Vérification de la résolution DNS des sous-domaines actifs pour obtenir leurs adresses IP associées.
 
 
-## 🛠️ Utilisation :
+⚙️ **Installer les dépendances** : 
 
-    Cloner le dépôt : git clone https://github.com/votre-utilisateur/SubBirack.git
+### Prérequis
+- Python 3.7 ou supérieur
+- `pip` installé
+- Git installé sur votre machine
 
+
+### 📋 Étapes d'installation
+
+**Clonez le dépôt Git** :
+
+    git clone https://github.com/BirackInit/SubBirack.git
     cd SubBirack
-
-➕ **Installer les dépendances** : 
-Assurez-vous d'avoir un environnement virtuel activé et exécutez :
-
-    source venv/bin/activate
+    
+**Installer les modules nécessaires en utilisant le fichier requirements.txt fourni**.
+    
     pip install -r requirements.txt
 
-**Exécuter le script** : 
-Utilisez la commande suivante pour analyser un domaine :
+**Rendez le script exécutable (optionnel mais recommandé) :**
 
-    ./SubBirack.py <domaine>
+    chmod +x SubBirack.py
+
+## 🛠️ Utilisation :
+
+**Utilisez la commande suivante pour analyser un domaine cible :**
+
+    python3 SubBirack.py example.com
 
 **Exemple** :
 
     ./SubBirack.py example.com
 
-## ⚙️ Exigences :
 
-Python 3.x : Assurez-vous que Python 3 est installé.
-Sublist3r : Cet outil est utilisé pour la recherche de sous-domaines. 
-
-Installez-le via pip :
-
-    pip install sublist3r
-    
-Modules requis :
-
-    requests
-    dns.resolver
-    subprocess
-    
-Ces modules peuvent être installés via le fichier requirements.txt fourni.
-
-## 💡 Remarques :
-
-**Environnement virtuel** : 
-L'utilisation d'un environnement virtuel est recommandée pour isoler les dépendances. Activez-le avec :
-
-    source venv/bin/activate
-
-**Sublist3r** : Si vous rencontrez des problèmes lors de l'installation, utilisez pipx pour l'installer dans un environnement isolé :
-
-    pipx install sublist3r
-
-**Ajout au PATH** : Si nécessaire, ajoutez Sublist3r à votre PATH :
-
-    export PATH=$PATH:/root/.local/bin
 
 ## ⚠️ Disclaimer :
 
