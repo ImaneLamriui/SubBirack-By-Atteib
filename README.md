@@ -1,7 +1,7 @@
 # SubBirack
 
 > [!Note]
-> SubBirack.py est un script avancé conçu pour identifier et analyser en profondeur les sous-domaines d'un domaine cible. 
+> SubBirack.py est un script conçu pour identifier et analyser en profondeur les sous-domaines d'un domaine cible. 
 > 
 > ## ✨ Fonctionnalités
 > Il intègre plusieurs fonctionnalités, notamment :
